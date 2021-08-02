@@ -1,0 +1,68 @@
+1：在Spring MVC中，DispatcherServlet 是负责处理http请求和响应的
+2：Spring中的Bean的实例定义作用域：
+  	Singleton prototype request session application websocket globalSession
+3：HTTP处于 应用层    TCP协议传输层    IP协议网络层
+4：如果地址栏输出http://localhost:8080/MyDemo/aaa.action,则在控制层的方法的注解
+@RequestMapping（）中value属性的值应为 value=“/aaa”
+5:Spring的配置文件的名称为applicationContext.xml，默认放在类路径下
+6:Mybatis的配置文件的名称是 mybatis-config.xml，默认放在类路径下
+7:SpringMVC的配置文件的名称是springmvc-config.xml，默认放在类路径下
+8:网络响应的状态码
+	100：客户端应当继续发送请求
+	404：表示的含义请求参数有误
+	200：表示请求已经成功被服务器接收，理解
+	500：服务器遇到了一个未曾预料的状况，导致它无法完成对请求的处理。一般来说，
+ 	        这个问题都会在服务器端的源代码出现错误时出现
+	300：Multiple Choices被请求的资源一系列可供选择的回馈信息里，每个都有自己特有
+	       的地址和浏览器驱动的商议信息，用户或浏览器能够自行悬着一个首选的地址进行
+	     重定向
+9：Spring支持的事务功能包括：事务的传播行为，事务回滚，事务的隔离级别
+10：Spring Bean注入的3种方式有：接口注入，构造器注入，属性注入
+11：Spring自动装载模式：byname byType constructor
+12：Spring的核心功能包括：控制反转IOC     面向切面编程AOP
+13：Spring特性中的IoC：所谓控制反转是指控制权由应用代码转到外部容器，即控制权的转移：
+   IoC将控制创建的职责搬进了框架中，从应用代码脱离开来；使用Spring的IoC容器时只需要
+  指出组件需要的对象，在运行时Spring的IoC容器会根据xml配置数据提供给它；不是由程序代码操作
+14：Spring bean作用范围是 Singleton Prototype Session Abstract，默认是Prototype
+15，Spring DAO中最常用的类是jdbcTemplate SimplejdbcTemplate
+16：以下哪个是Spring AOP的注解：@Before @Around @AfterThrowing @AfterReturning @Pointcut
+17：SpringAOP可以使用XML配置
+18：Spring中“@Transactional”注解是用AOP实现
+19：MyBatis的关联映射有：一对一 一对多 多对多
+20：property：指的是集合属性的值，
+       ofType:指的是集合中元素的类型
+21：MyBatis映射文件中的主要元素的功能：
+		<select>元素：查询
+		<insert>元素：插入	
+		<delete>元素：删除
+		<update>元素：修改
+22：SpringMVC中的@RequesetMapping注解可以注解在类的方法上，该注解的作用是用来完成请求与
+请求处理方法的映射：value：默认属性，用于指定映射的URL
+23：下面哪个的Spring最核心的servlet：DispatcherServlet，在Spring MVC的，可以配置多个
+DispatcherServlet DispatcherServlet在Spring MVC中是核心servlet 它负责接收请求并将请求分发给
+适合的控制器，要使Spring MVC可用，DispatcherServlet需要在web.xml中配置
+24：Spring的组成一共有7快组成
+25：对Mybatis的支持主要用到Spring的Spring ORM模块
+26：Spring的通知类型有Before通知，After return通知 Throws通知 Around通知
+27：IOC自动装载方法的是byName 和 byType
+28：Spring支持如下两种方式的事务管理编程式事务管理和声明式事务管理程序：完成一张表的添删改查 
+29：在实际开发中，通常采用四成体系架构分别是什么？并写出作用？
+	视图层：用户界面	
+	表示层（控制层）：表示层提供了与Struts等框架的整合，程序转向
+	Service：在业务逻辑成可以管理事务，记录日志等
+	持久成：在持久层可以整合Hibernate jdbcTemplate
+30：Spring或者Springmvc中常用注解 并解释含义
+	1：@Component 基本注解，标识一个受Spring管理的组件
+	2：@Controller  标识为一个表示层的组件
+	3：@Service 标识为一个业务层的组件
+	4; @Repository 标识为一个持久层的组件
+	5：@Autowired 自动装配
+	6：@Qualifier（“”）具体指定要装配的组件的id值
+	7：@RequestMapping()完成请求映射
+	8：@PathVariable 映射请求URL中占位符到请求处理方法的形参
+31：简述Mybatis的动态SQL 列出常用标签及作用
+	<if>	判断语句 用于单条件分支判断
+	<choose> <when><otherwise> 相当于Java中的switch case default语句 用于多条件分支判断
+	<where><trim><set> 辅助元素 用于SQL的拼装 特殊字符问题	
+	<foreach> 循环语句 常用于in语句等列举条件中
+	<bind>从OGNL表达式中创建一个变量，并将其绑定到上下文，常用于模糊查询的sql中
